@@ -1,2 +1,21 @@
 CLAUDE.md
 PLANO.md
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Secrets and local corpus data (PDFs and extracted text)
+.env
+/data/

@@ -1,0 +1,29 @@
+[project]
+name = "safrinha"
+version = "0.1.0"
+description = "Virtual assistant for soybean and corn management, grounded in Embrapa technical documents."
+readme = "README.md"
+authors = [
+    { name = "Lucas José Souza Rodrigues", email = "lucas.souza742007@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "pydantic-settings>=2.16.2",
+    "typer>=0.27.3",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+safrinha = "safrinha.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
