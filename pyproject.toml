@@ -23,7 +23,18 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "httpx2>=2.16.0",
     "pre-commit>=4.7.0",
     "pytest>=9.2.0",
     "ruff>=0.17.3",
 ]
+
+[tool.ruff.lint]
+# Default rules (E, F) plus warnings, import sorting, common bugs and
+# modern Python syntax.
+select = ["E", "W", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Fail on unknown markers, bad config and unexpectedly passing xfail tests.
+strict = true
